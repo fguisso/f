@@ -1,8 +1,7 @@
-FROM node:18-alpine
+FROM node:22-alpine
 WORKDIR /app
-COPY package*.json ./
-COPY prisma ./prisma
-RUN npm install --silent && npx prisma generate
 COPY . .
+RUN apk add openssl
+RUN npm install --silent && npx prisma generate
 EXPOSE 4000
 CMD ["npm", "run", "dev"]
