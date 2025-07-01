@@ -10,3 +10,13 @@ This repository contains a simple full-stack application skeleton with a React f
 ## Development
 
 Each project is isolated so you can run `npm install` inside `frontend` and `api` separately.
+
+## Docker Compose
+
+You can start the entire stack with Docker if you have `docker` and `docker-compose` installed. Run:
+
+```bash
+docker-compose up
+```
+
+The API will be available on `http://localhost:4000` and the frontend on `http://localhost:3000`.
